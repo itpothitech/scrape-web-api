@@ -1,0 +1,7 @@
+{
+    "env": {
+        "DB_USER": "scraper",
+        "DB_PASSWORD": "eGRsfe2ZFZnZapuo",
+        "DB_NAME": "scrape_posts"
+    }
+}
