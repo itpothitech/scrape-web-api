@@ -19,7 +19,7 @@ const RetrieveInstaPosts = async (userName, tag, fromDate, toDate) => {
       let queryStr = { "profile.user_name": userName };
 
       userProfile = await InstaProfile.find(queryStr);
-      console.log("user profile =>", userProfile);
+      // console.log("user profile =>", userProfile);
     }
     return userProfile;
   } catch (error) {

@@ -1,4 +1,6 @@
 const express = require("express");
+const basicAuth = require("express-basic-auth");
+
 const bodyParser = require("body-parser");
 const timeout = require("connect-timeout");
 
@@ -25,6 +27,12 @@ app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PATCH, DELETE");
   next();
 });
+
+app.use(
+  basicAuth({
+    users: { scrape: "Secret@321" },
+  })
+);
 
 app.use("/api", postRoutes);
 
